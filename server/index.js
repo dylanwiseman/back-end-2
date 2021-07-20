@@ -12,4 +12,6 @@ app.post("/api/houses",ctrl.createHouse);
 app.put("/api/houses/:id",ctrl.updateHouse);
 app.delete("/api/houses/:id",ctrl.deleteHouse);
 
-app.listen(4004, () => console.log(`running on 4004`));
+const port = process.env.PORT
+
+app.listen(port, () => console.log(`server running`));
