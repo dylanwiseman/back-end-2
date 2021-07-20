@@ -24,8 +24,8 @@ app.get("/", (req, res) => {
   });
 
 app.get("/api/houses",ctrl.getHouses);
-app.post("/api/houses",goCrazy);
-app.put("/api/houses/:id",asdfjka);
+app.post("/api/houses",thisIsNotFunction);
+app.put("/api/houses/:id",ctrl.updateHouse);
 app.delete("/api/houses/:id",ctrl.deleteHouse);
 
 
