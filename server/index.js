@@ -1,11 +1,16 @@
 const express = require("express");
 const cors = require("cors");
 const ctrl = require("./controller")
+const path = require('path')
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "/public/index.html"));
+  });
 
 app.get("/api/houses",ctrl.getHouses);
 app.post("/api/houses",ctrl.createHouse);
