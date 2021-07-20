@@ -11,6 +11,7 @@ module.exports = {
         res.status(200).send(houses)
     },
     createHouse: (req,res) => {
+        console.log("create House working")
         const { address,price,imageURL } = req.body
         const newHouse = {id:houseId,address,price,imageURL}
         houses.push(newHouse)
