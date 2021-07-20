@@ -22,8 +22,8 @@ module.exports = {
         const { address,price,imageURL } = req.body
         const newHouse = {id:houseId,address,price,imageURL}
         houses.push(newHouse)
-        res.status(200).send(houses)
         rollbar.info("house added successfully")
+        res.status(200).send(houses)
         houseId++
     },
     updateHouse: (req,res) => {
