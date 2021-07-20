@@ -2,6 +2,12 @@ const Rollbar = require("rollbar")
 const houses = require("./db.json")
 let houseId = 4
 
+const rollbar = new Rollbar({
+    accessToken: '78be0bbabb1c494cb1040e52779c41d6',
+    captureUncaught: true,
+    captureUnhandledRejections: true
+  });
+
 module.exports = {
     getHouses: (req,res) => {
         res.status(200).send(houses)
@@ -17,6 +23,7 @@ module.exports = {
         const newHouse = {id:houseId,address,price,imageURL}
         houses.push(newHouse)
         res.status(200).send(houses)
+        rollbar.info("house added successfully")
         houseId++
     },
     updateHouse: (req,res) => {
