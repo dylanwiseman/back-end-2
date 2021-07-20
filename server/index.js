@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/houses",ctrl.getHouses);
 app.post("/api/houses",goCrazy);
-app.put("/api/houses/:id",ctrl.updateHouse);
+app.put("/api/houses/:id",asdfjka);
 app.delete("/api/houses/:id",ctrl.deleteHouse);
 
 
