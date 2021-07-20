@@ -10,7 +10,6 @@ module.exports = {
         const index = houses.findIndex(elem => elem.id === +req.params.id)
         houses.splice(index, 1)
         res.status(200).send(houses)
-        Rollbar.info("new Houses")
     },
     createHouse: (req,res) => {
         console.log("create House working")
