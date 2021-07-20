@@ -23,6 +23,7 @@ module.exports = {
         const newHouse = {id:houseId,address,price,imageURL}
         houses.push(newHouse)
         rollbar.info("house added successfully")
+        rollbar.log("house added!!")
         res.status(200).send(houses)
         houseId++
     },
