@@ -1,4 +1,4 @@
-// const Rollbar = require("rollbar")
+const Rollbar = require("rollbar")
 const houses = require("./db.json")
 let houseId = 4
 
