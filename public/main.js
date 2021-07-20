@@ -13,6 +13,7 @@ const updateHouse = (id, type) => axios.put(`${baseURL}/${id}`, {type}).then(hou
 
 function submitHandler(e) {
     e.preventDefault()
+    console.log("clicked!")
 
     let address = document.querySelector('#address')
     let price = document.querySelector('#price')
