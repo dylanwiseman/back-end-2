@@ -11,7 +11,7 @@ const rollbar = new Rollbar({
 module.exports = {
     getHouses: (req,res) => {
         rollbar.log('gethouses')
-        res.status(200).send(houses)
+        // res.status(200).send(houses)
     },
     deleteHouse: (req, res) => {
         const index = houses.findIndex(elem => elem.id === +req.params.id)
