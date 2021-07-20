@@ -16,7 +16,7 @@ const rollbar = new Rollbar({
   captureUnhandledRejections: true
 });
 
-rollbar.log("Hello world!");
+rollbar.log("This is a new log");
 
 
 app.get("/", (req, res) => {
