@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
   });
 
 app.get("/api/houses",ctrl.getHouses);
-app.post("/api/houses",thisIsNotFunction);
+app.post("/api/houses",ctrl.createHouse);
 app.put("/api/houses/:id",ctrl.updateHouse);
 app.delete("/api/houses/:id",ctrl.deleteHouse);
 
